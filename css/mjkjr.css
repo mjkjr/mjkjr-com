@@ -572,9 +572,9 @@ body {
 	color: rgb(17,24,39);
 	line-height: 1.5;
 	letter-spacing: .05em;
-	background-size: cover;
-	background-image:url('/img/bg.jpg');
 	background-color: #032D55;
+	background-image:url('/img/bg.jpg');
+	background-size: cover;
 	-webkit-font-smoothing: antialiased;
 }
 h1 {
@@ -583,8 +583,11 @@ h1 {
 	line-height: 2.25rem;
 	padding-top: 2rem;
 }
+p {
+	padding-bottom: 0.5rem;
+}
 hr {
-	margin-top: 0.5rem;
+	margin: 0.5rem 0 1rem 0;
 	border-color: rgb(59,130,246);
 	border-bottom-width: 2px;
 	opacity: .25;
@@ -605,7 +608,7 @@ hr {
 	color: rgb(30,64,175);
 	fill: currentColor;
 	height: 1rem;
-	padding-right: 0.5rem;
+	padding-right: 0.25rem;
 	width: 2rem;
 }
 #main {
@@ -645,6 +648,11 @@ hr {
 	background-size:cover;
 	box-shadow: 0 0 #0000,0 0 #0000,0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
+#highlights div {
+	font-weight: bold;
+	margin: 0 0.5rem;
+}
+#highlights,
 #occupation,
 #location,
 #contract,
@@ -653,29 +661,19 @@ hr {
 	align-items: center;
 	justify-content: center;
 }
-#occupation {
-	padding-top: 1rem;
-}
-#location {
-	padding-top: .5rem;
-	color: rgb(75,85,99);
-	font-size: .75rem;
-	line-height: 1rem;
-}
 #bio {
-	line-height: 1.25rem;
 	padding: 2rem 0;
 }
 #contract {
-	font-size: 0.75rem;
+	font-size: 0.875rem;
 }
 #buttons {
-	padding: 2rem 0 1rem 0;
+	padding: 1.5rem 0 1rem 0;
 }
 #links {
 	width: 80%;
 	margin: 1rem auto 0 auto;
-	padding-bottom: 4rem;
+	padding-bottom: 2rem;
 	flex-wrap: wrap;
 	font-size: .75rem;
 }
@@ -690,7 +688,7 @@ hr {
 }
 @media (min-width: 768px) {
 	#profile {
-		padding: 3rem;
+		padding: 2rem;
 	}
 }
 @media (min-width: 1024px) {
@@ -722,16 +720,15 @@ hr {
 		margin-right: 0;
 		text-align: left;
 	}
+	#highlights div {
+		margin: 0 1rem 0 0;
+	}
+	#highlights,
 	#occupation,
 	#location,
 	#contract,
 	#links {
 		justify-content: flex-start;
-	}
-	#location,
-	#contract {
-		font-size: .875rem;
-		line-height: 1.25rem;
 	}
 	#links {
 		width: 100%;
