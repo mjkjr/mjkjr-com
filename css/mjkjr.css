@@ -575,6 +575,7 @@ body {
 	background-color: #032D55;
 	background-image:url('/img/bg.jpg');
 	background-size: cover;
+	background-attachment: fixed;
 	-webkit-font-smoothing: antialiased;
 }
 h1 {
@@ -597,6 +598,7 @@ hr {
 	color: rgb(255,255,255);
 	font-weight: 700;
 	padding: .5rem 1rem;
+	cursor: pointer;
 }
 .button:hover {
 	background-color: rgb(30,64,175);
