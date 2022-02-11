@@ -673,7 +673,6 @@ hr {
 #links {
 	width: 80%;
 	margin: 1rem auto 0 auto;
-	padding-bottom: 2rem;
 	flex-wrap: wrap;
 	font-size: .75rem;
 }
