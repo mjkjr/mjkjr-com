@@ -70,7 +70,6 @@ svg {
 	border-style: solid;
 	display: block;
 	vertical-align: middle;
-	max-width: 100%;
 	height: auto;
 }
 
@@ -86,7 +85,7 @@ svg {
 #button:hover {
 	background-color: rgb(30,64,175);
 }
-#button, #photo-sm {
+#button {
 	border-radius: 9999px;
 }
 .icon {
@@ -99,18 +98,16 @@ svg {
 #main {
 	height: auto;
 	margin: 8rem auto;
-	max-width: 56rem;
+	max-width: 62.5rem;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 }
 #photo-lg {
-	width: 100%;
-}
-#photo-lg img {
 	display: none;
+	position: relative;
 }
-#photo-lg img, #profile {
+#photo-lg, #profile {
 	box-shadow: 0 0 #0000,0 0 #0000,0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 #profile {
@@ -125,13 +122,42 @@ svg {
 }
 #photo-sm {
 	display: block;
+	position: relative;
 	width: 12rem;
 	height: 12rem;
 	margin: -4rem auto 0;
-	background-position: center;
-	background-image:url('/img/mjkjr.jpg');
-	background-size:cover;
+}
+#photo-sm::before,
+#photo-sm::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-position: top;
+	background-size: cover;
+	border-radius: 9999px;
 	box-shadow: 0 0 #0000,0 0 #0000,0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+#photo-sm::before {
+	background-image: url('/img/mjkjr-1.jpg');
+	z-index: 10;
+}
+#photo-sm.fade::before {
+	opacity: 0;
+}
+#photo-sm.fade::after {
+	opacity: 1;
+}
+#photo-sm::after {
+	background-image: url('/img/mjkjr-2.jpg');
+	z-index: -1;
+	opacity: 0;
 }
 #highlights div {
 	font-weight: bold;
@@ -197,10 +223,38 @@ svg {
 	}
 	#photo-lg {
 		width: 40%;
-	}
-	#photo-lg img {
 		display: block;
+		width: 400px;
+		height: 600px;
+	}
+	#photo-lg::before,
+	#photo-lg::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
 		border-radius: .5rem;
+		-webkit-transition: opacity 1s ease-in-out;
+		-moz-transition: opacity 1s ease-in-out;
+		-o-transition: opacity 1s ease-in-out;
+		transition: opacity 1s ease-in-out;
+	}
+	#photo-lg::before {
+		background-image:url('/img/mjkjr-1.jpg');
+		z-index: 10;
+	}
+	#photo-lg.fade::before {
+		opacity: 0;
+	}
+	#photo-lg.fade::after {
+		opacity: 1;
+	}
+	#photo-lg::after {
+		background-image:url('/img/mjkjr-2.jpg');
+		z-index: -1;
+		opacity: 0;
 	}
 	#profile {
 		width: 60%;

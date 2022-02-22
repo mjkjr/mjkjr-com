@@ -31,9 +31,7 @@
 </head>
 <body>
 	<div id="main">
-		<div id="photo-lg">
-			<img src="img/mjkjr.jpg">
-		</div>
+		<div id="photo-lg"></div>
 		<div id="profile">
 			<div id="photo-sm"></div>
 			<h1>Michael J. Kozubal Jr.</h1>
@@ -72,6 +70,14 @@
 			</a>
 		</div>
 	</div>
+	<script>
+		const plg = document.getElementById('photo-lg');
+		const psm = document.getElementById('photo-sm');
+		setInterval(function() {
+			plg.classList.toggle('fade');
+			psm.classList.toggle('fade');
+		}, 10000);
+	</script>
 	<script src="js/mjkjr.obf.js"></script>
 </body>
 </html>
