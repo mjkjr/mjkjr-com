@@ -106,9 +106,13 @@ svg {
 #photo-lg {
 	display: none;
 	position: relative;
+	z-index: 1;
+	box-shadow: 6px 8px 10px 0px rgba(0, 0, 0, 0.50);
 }
-#photo-lg, #profile {
-	box-shadow: 0 0 #0000,0 0 #0000,0 25px 50px -12px rgba(0, 0, 0, 0.25);
+#photo-lg,
+#photo-lg:before,
+#photo-lg:after {
+	border-radius: .5rem;
 }
 #profile {
 	width: 100%;
@@ -119,6 +123,7 @@ svg {
 	background-color: rgb(255,255,255);
 	padding: 0 1.25rem 1.5rem 1.25rem;
 	text-align: center;
+	box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.50);
 }
 #photo-sm {
 	display: block;
@@ -126,6 +131,8 @@ svg {
 	width: 12rem;
 	height: 12rem;
 	margin: -4rem auto 0;
+	border-radius: 9999px;
+	box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.50);
 }
 #photo-sm::before,
 #photo-sm::after {
@@ -235,7 +242,6 @@ svg {
 		left: 0;
 		bottom: 0;
 		right: 0;
-		border-radius: .5rem;
 		-webkit-transition: opacity 1s ease-in-out;
 		-moz-transition: opacity 1s ease-in-out;
 		-o-transition: opacity 1s ease-in-out;
