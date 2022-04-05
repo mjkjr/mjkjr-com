@@ -173,7 +173,6 @@ svg {
 #highlights,
 #occupation,
 #location,
-#contract,
 #links {
 	display: flex;
 	align-items: center;
@@ -182,9 +181,6 @@ svg {
 #bio {
 	padding: 1.5rem 0;
 	font-size: .875rem;
-}
-#contract {
-	font-size: 0.875rem;
 }
 #links {
 	width: 80%;
@@ -195,6 +191,7 @@ svg {
 #links a {
 	text-decoration: none;
 	margin-top: 1rem;
+	margin-right: 1rem;
 }
 #links .icon {
 	display: inline-block;
@@ -208,9 +205,6 @@ svg {
 @media (min-width: 768px) {
 	#profile {
 		padding: 0 2rem 2rem 2rem;
-	}
-	#links a {
-		margin-right: 1rem;
 	}
 	#links a:last-child {
 		margin-right: 0;
@@ -279,7 +273,6 @@ svg {
 	#highlights,
 	#occupation,
 	#location,
-	#contract,
 	#links {
 		justify-content: flex-start;
 	}
