@@ -171,15 +171,19 @@ svg {
 	margin: 0 0.5rem;
 }
 #highlights,
+#links a {
+	display: block;
+}
 #occupation,
-#location,
-#links {
+#location {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-align: left;
+	line-height: 2em;
 }
 #bio {
-	padding: 1.5rem 0;
+	padding: 1.25rem 0 .75rem 0;
 	font-size: .875rem;
 }
 #links {
@@ -187,6 +191,7 @@ svg {
 	margin: 0 auto;
 	flex-wrap: wrap;
 	font-size: .75rem;
+	padding-bottom: 1rem;
 }
 #links a {
 	text-decoration: none;
@@ -205,6 +210,14 @@ svg {
 @media (min-width: 768px) {
 	#profile {
 		padding: 0 2rem 2rem 2rem;
+	}
+	#highlights,
+	#occupation,
+	#location,
+	#links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	#links a:last-child {
 		margin-right: 0;
@@ -278,6 +291,5 @@ svg {
 	}
 	#links {
 		width: 100%;
-		padding-bottom: 0;
 	}
 }
